@@ -98,7 +98,7 @@
         value = parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree) + parseInt(valueFour);
 
         if(isNaN(value)) {
-            alert('Будь ласка, перевірте, чи всі введені дані коректні.');
+            alert('Check if an initial data is correct!');
             return;
         }
 

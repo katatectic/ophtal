@@ -15,26 +15,17 @@
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Equation</a>
+    <a class="navbar-brand" href="#">Рівняння</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-    </div>
+    </button>    
 </nav>
 
 <main role="main">
-
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Initial data</h1>
-            <p>Enter, please, here initial data.</p>
+            <h1 class="display-3">Формула розрахунку</h1>
+            <p>Будь ласка, введіть початкові дані</p>
         </div>
     </div>
 
@@ -42,7 +33,7 @@
         <!-- Example row of columns -->
         <div class="input-group input-group-lg">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">First Parameter</span>
+                <span class="input-group-text" id="inputGroup-sizing-lg">Перший параметр</span>
             </div>
             <input type="text" class="form-control value-one" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
             <div class="input-group-append">
@@ -52,7 +43,7 @@
 
         <div class="input-group input-group-lg" style="margin-top: 50px;">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Second Parameter</span>
+                <span class="input-group-text" id="inputGroup-sizing-lg">Другий параметр</span>
             </div>
             <input type="text" class="form-control value-two" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
             <div class="input-group-append">
@@ -62,7 +53,7 @@
 
         <div class="input-group input-group-lg" style="margin-top: 50px;">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Third Parameter</span>
+                <span class="input-group-text" id="inputGroup-sizing-lg">Третій параметр</span>
             </div>
             <input type="text" class="form-control value-three" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
             <div class="input-group-append">
@@ -72,7 +63,7 @@
 
         <div class="input-group input-group-lg" style="margin-top: 50px;">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Fourth Parameter</span>
+                <span class="input-group-text" id="inputGroup-sizing-lg">Четвертий параметр</span>
             </div>
             <input type="text" class="form-control value-four" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
             <div class="input-group-append">
@@ -80,7 +71,7 @@
             </div>
         </div>
         <hr>
-        <button type="button" class="btn btn-primary btn-lg btn-block calculate-button">Calculate</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block calculate-button">Розрахувати</button>
 
         <div class="alert alert-primary result" role="alert" style="margin-top: 50px; display: none; font-size: xxx-large"></div>
     </div>
@@ -113,7 +104,7 @@
 
         $(".result").show();
         $(".result").empty();
-        $(".result").append('The result is: ' + value);
+        $(".result").append('Відповідь: ' + value);
     });
 </script>
 </body>

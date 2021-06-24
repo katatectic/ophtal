@@ -14,18 +14,15 @@
 
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Рівняння</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>    
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 40px;">
+    
 </nav>
 
 <main role="main">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Формула розрахунку</h1>
-            <p>Будь ласка, введіть початкові дані</p>
+            <h1 class="display-3">Рівняння логістичної регресії</h1>
+            <h1 class="display-6">Будь ласка, введіть початкові дані</h1>
         </div>
     </div>
 
@@ -33,9 +30,29 @@
         <!-- Example row of columns -->
         <div class="input-group input-group-lg">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Перший параметр</span>
+                <span class="input-group-text" id="inputGroup-sizing-lg">Початкова рефракція OD</span>
             </div>
-            <input type="text" class="form-control value-one" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input value="-2.25" type="text" class="form-control value-one-od" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-append">
+                <span class="input-group-text">дптр</span>
+            </div>
+        </div>
+
+        <div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Початкова рефракція OS</span>
+            </div>
+            <input value="-2.5" type="text" class="form-control value-one-os" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-append">
+                <span class="input-group-text">дптр</span>
+            </div>
+        </div>
+
+        <div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Діаметр зіниці OD</span>
+            </div>
+            <input value="6.09" type="text" class="form-control value-two-od" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
             <div class="input-group-append">
                 <span class="input-group-text">мм</span>
             </div>
@@ -43,37 +60,113 @@
 
         <div class="input-group input-group-lg" style="margin-top: 50px;">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Другий параметр</span>
+                <span class="input-group-text" id="inputGroup-sizing-lg">Діаметр зіниці OS</span>
             </div>
-            <input type="text" class="form-control value-two" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input value="5.25" type="text" class="form-control value-two-os" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
             <div class="input-group-append">
-                <span class="input-group-text">см</span>
+                <span class="input-group-text">мм</span>
             </div>
         </div>
 
         <div class="input-group input-group-lg" style="margin-top: 50px;">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Третій параметр</span>
+                <span class="input-group-text" id="inputGroup-sizing-lg">Кератометрія OD</span>
             </div>
-            <input type="text" class="form-control value-three" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input value="46" type="text" class="form-control value-three-od" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
             <div class="input-group-append">
-                <span class="input-group-text">кг</span>
+                <span class="input-group-text">дптр</span>
             </div>
         </div>
 
         <div class="input-group input-group-lg" style="margin-top: 50px;">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Четвертий параметр</span>
+                <span class="input-group-text" id="inputGroup-sizing-lg">Кератометрія OS</span>
             </div>
-            <input type="text" class="form-control value-four" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input value="46.12" type="text" class="form-control value-three-os" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
             <div class="input-group-append">
-                <span class="input-group-text">Дж</span>
+                <span class="input-group-text">дптр</span>
             </div>
         </div>
-        <hr>
-        <button type="button" class="btn btn-primary btn-lg btn-block calculate-button">Розрахувати</button>
 
-        <div class="alert alert-primary result" role="alert" style="margin-top: 50px; display: none; font-size: xxx-large"></div>
+        <div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Периферична сила рогівки по кільцю поворотної зони
+темпорально OD</span>
+            </div>
+            <input value="0.16" type="text" class="form-control value-four-od" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Периферична сила рогівки по кільцю поворотної зони
+темпорально OS</span>
+            </div>
+            <input value="0.19" type="text" class="form-control value-four-os" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Периферична сила рогівки по кільцю поворотної зони
+назально OD</span>
+            </div>
+            <input value="0.8" type="text" class="form-control value-five-od" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Периферична сила рогівки по кільцю поворотної зони
+назально OS</span>
+            </div>
+            <input value="0.7" type="text" class="form-control value-five-os" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+		
+		<div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Діаметр рогівки OD</span>
+            </div>
+            <input value="11.5" type="text" class="form-control value-six-od" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-append">
+                <span class="input-group-text">мм</span>
+            </div>
+        </div>
+
+        <div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Діаметр рогівки OS</span>
+            </div>
+            <input value="11.51" type="text" class="form-control value-six-os" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-append">
+                <span class="input-group-text">мм</span>
+            </div>
+        </div>
+		
+		<div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">ПЗО_початкове OD</span>
+            </div>
+            <input value="23.62" type="text" class="form-control value-seven-od" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-append">
+                <span class="input-group-text">мм</span>
+            </div>
+        </div>
+
+        <div class="input-group input-group-lg" style="margin-top: 50px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">ПЗО_початкове OD</span>
+            </div>
+            <input value="23.46" type="text" class="form-control value-seven-os" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-append">
+                <span class="input-group-text">мм</span>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <button type="button" class="btn btn-primary btn-lg btn-block calculate-button">Розрахувати</button>
+
+    <div class="alert result-od" role="alert" style="margin-top: 50px; display: none; font-size: xxx-large"></div>
+		
+    <div class="alert result-os" role="alert" style="margin-top: 50px; display: none; font-size: xxx-large"></div>
     </div>
 </main>
 
@@ -86,25 +179,83 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script>
+    $(document).ready(function()
+    {
+        const success = 'alert-success';
+        const danger = 'alert-danger';
 
-    $(".calculate-button").on("click", function() {
-        $(".result").hide();
-        let valueOne = $(".value-one").val().trim(),
-            valueTwo = $(".value-two").val().trim(),
-            valueThree = $(".value-three").val().trim(),
-            valueFour = $(".value-four").val().trim();
-        let value;
+        $(".calculate-button").on("click", function() {
+            $(".result-od").removeClass(success).removeClass(danger);
+            $(".result-os").removeClass(success).removeClass(danger);
+            $(".result-od").hide();
+            $(".result-os").hide();
+            let valueOneOd = $(".value-one-od").val().trim(),
+                valueOneOs = $(".value-one-os").val().trim(),
+                valueTwoOd = $(".value-two-od").val().trim(),
+                valueTwoOs = $(".value-two-os").val().trim(),
+                valueThreeOd = $(".value-three-od").val().trim(),
+                valueThreeOs = $(".value-three-os").val().trim(),
+                valueFourOd = $(".value-four-od").val().trim(),
+                valueFourOs = $(".value-four-os").val().trim(),
+                valueFiveOd = $(".value-five-od").val().trim(),
+                valueFiveOs = $(".value-five-os").val().trim(),
+                valueSixOd = $(".value-six-od").val().trim(),
+                valueSixOs = $(".value-six-os").val().trim(),
+                valueSevenOd = $(".value-seven-od").val().trim(),
+                valueSevenOs = $(".value-seven-os").val().trim();
 
-        value = parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree) + parseInt(valueFour);
+            let resultValueOd,
+                resultValueOs;
 
-        if(isNaN(value)) {
-            alert('Будь ласка, перевірте, чи всі введені дані коректні.');
-            return;
+            resultValueOd = $.calculateResult(
+                valueOneOd,
+                valueTwoOd,
+                valueThreeOd,
+                valueFourOd,
+                valueFiveOd,
+                valueSixOd,
+                valueSevenOd
+            );
+
+            resultValueOs = $.calculateResult(
+                valueOneOs,
+                valueTwoOs,
+                valueThreeOs,
+                valueFourOs,
+                valueFiveOs,
+                valueSixOs,
+                valueSevenOs
+            );
+
+            if(isNaN(resultValueOd) || isNaN(resultValueOs)) {
+                alert('Будь ласка, перевірте, чи всі введені дані коректні.');
+                return;
+            }
+
+            $(".result-od").show();
+            $(".result-os").show();
+            $(".result-od").empty();
+            $(".result-os").empty();
+            $(".result-od").addClass($.alertType(resultValueOd)).append('p(OD): ' + resultValueOd.toFixed(2));
+            $(".result-os").addClass($.alertType(resultValueOs)).append('p(OS): ' + resultValueOs.toFixed(2));
+        });
+
+        $.calculateResult = function(x1, x2, x3, x4, x5, x6, x7) {
+            return 1/(1 +
+                Math.exp(-(15.239
+                    - 0.33 * parseFloat(x1)
+                    - 1.702 * parseFloat(x2)
+                    - 0.119 * parseFloat(x3)
+                    + 0.137 * parseFloat(x4)
+                    - 0.403 * parseFloat(x5)
+                    - 0.498 * parseFloat(x6)
+                    + 0.059 * parseFloat(x7)
+                )));
+        };
+
+        $.alertType = function(result) {
+            return result < 0.5 ? success : danger;
         }
-
-        $(".result").show();
-        $(".result").empty();
-        $(".result").append('Відповідь: ' + value);
     });
 </script>
 </body>
